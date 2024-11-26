@@ -1,16 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { Component } from 'react';
+import Email from './Email';
+import Name from './Name';
+import Address from './Address';
+import PersonalInfo from './PersonalInfo';
 
-function App() {
-  const [count, setCount] = useState(0)
+class Profile extends Component {
+  render() {
+    const { user } = this.props; 
 
-  return (
-    <>
-      <p></p>
-    </>
-  )
+    return (
+      <div className="profile-container">
+        <h2>User Profile</h2>
+        <Name name={user.name} />
+        <Email email={user.email} />
+        <Address address={user.address} />
+        <PersonalInfo age={user.age} 
+        gender={user.gender} />
+      </div>
+    );
+  }
 }
 
-export default App
+export default Profile;

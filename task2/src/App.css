@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef2f7;
+  color: #333;
+}
+
+
+.profile-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.profile-container h2 {
   text-align: center;
+  color: #3f51b5;
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.profile-container div {
+  padding: 15px;
+  background: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.profile-container div span {
+  font-size: 16px;
+  color: #555;
+}
+
+.profile-container div strong {
+  font-size: 18px;
+  color: #222;
+}
+
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #354296;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(1);
+  box-shadow: none;
+}
+
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .profile-container h2 {
+    font-size: 20px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .profile-container div {
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .profile-container div span,
+  .profile-container div strong {
+    font-size: 14px;
+  }
 }
