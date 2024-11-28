@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid silver;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+input, textarea, select {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: bisque;
+    border: none;
+    border-radius: 5px;
+}
+.checking {
+    display: flex;
+    flex-direction: row;
+}
+button {
+    background-color: tan;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
